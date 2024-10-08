@@ -25,20 +25,19 @@ function App() {
     }
   ];
   return (
-    <>
+    <div className='bg-back'>
       <div className='lg:bg-home_desk sm:bg-home_mob mv:bg-home_mob md:bg-home_mob lg:h-52 md:h-52 sm:h-60 mv:h-60 relative'>
-      <div className="bg-white border rounded-lg p-4 leading-10 absolute lg:translate-y-28 mv:translate-y-36 md:translate-y-28 sm:translate-y-36 mv:p-5 transform lg:translate-x-full md:translate-x-full sm:translate-x-28  mv:translate-x-4 lg:w-2/6 shadow-lg">
-      <div className="flex flex-row space-x-2 mb-5">
-                <img src={star} className="h-8 my-auto" />
-              <h1 className="text-purple-950 font-worksans font-extrabold text-4xl my-auto">FAQs</h1>
-           </div>
-           {faqData.map((data)=>(
-          <FaQ question={data.question} answer={data.answer} />
-        )
-        )}
+			<div className="bg-white border rounded-lg p-4 leading-10 absolute lg:translate-y-28 mv:translate-y-36 md:translate-y-28 sm:translate-y-36 mv:p-5 transform lg:translate-x-full md:translate-x-full sm:translate-x-28  mv:translate-x-4 lg:w-2/6 shadow-lg">
+				<div className="flex flex-row space-x-2 mb-5">
+					<img src={star} className="h-8 my-auto" />
+					<h1 className="text-purple-950 font-worksans font-extrabold text-4xl my-auto">FAQs</h1>
+				</div>
+				{faqData.map((data)=>(
+					<FaQ question={data.question} answer={data.answer} />)
+				)}
+			</div>
       </div>
-      </div>
-    </>
+    </div>
     
   );
 }
